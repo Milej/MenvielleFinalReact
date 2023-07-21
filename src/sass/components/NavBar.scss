@@ -2,35 +2,31 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
-  padding: 8px 10rem; 
 
   &__brand{
-    font-size: 1.5rem;
-    text-decoration: none;
+    display: flex;
     color: #444 !important; 
   }
 
   &__navigation{
     list-style: none;
-    position: fixed;
-    right: 0;
+    display: flex;
+    flex-direction: row;
   }
 
   &__link{
     text-decoration: none;
+    display: flex;
   }
 
   &__counter{
-    position: relative;
+    height: 100%;
     color: white;
     font-weight: bold;
     background-color: rgb(255, 136, 0);
     padding: 2px 6px;
     border-radius: 100%;
-    right: 12px;
-    font-size: 10px;
-    visibility: hidden;
+    font-size: 12px;
   }
 
 }

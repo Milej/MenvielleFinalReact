@@ -1,30 +1,29 @@
 import React from 'react'
+import Logo from '../img/logo.webp';
+import CartWidget from './CartWidget';
+import NavItem from './NavItem';
+import NavList from './NavList';
+
 
 function NavBar() {
+  
   return (
-    <div>
-      <nav className="navbar">
+    
+    <nav className="navbar bg-orange-200 px-5 py-3">
 
       <a className="navbar__brand" href="#">
-        <img src="#" alt="Logo" width="30" height="24" className="navbar__logo" />
-        Mascotienda Zamba
+        <img src={Logo} alt="Logo" width="60" />
+        <span className='px-3 py-2'>Mundo Peludo</span>
       </a>
 
       <ul className="navbar__navigation">
-
-        <li className="navbar__item">
-
-          <a href="#" className="navbar__link">
-            <img src="#" />
-            <span className="navbar__counter" id="cartItems">0</span>
-          </a>
-
-        </li>
-
+        <NavItem route="#" texto="Inicio"/>
+        <NavList/>
       </ul>
 
-      </nav>
-    </div>
+      <CartWidget/> 
+
+    </nav>
   )
 }
 
