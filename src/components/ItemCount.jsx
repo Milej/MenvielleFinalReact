@@ -1,21 +1,21 @@
 import { useState, useRef } from "react";
 
-const ItemCount = ({ stock }) => {
-  const [quantity, setCount] = useState(1);
+const ItemCount = ({ stock, quantity, setQuantity }) => {
+
   const inputCount = useRef();
 
   const onSubstract = () => {
-    quantity > 1 && setCount(quantity - 1);
+    quantity > 1 && setQuantity(quantity - 1);
   };
 
   const onAdd = () => {
-    quantity < stock && setCount(quantity + 1);
+    quantity < stock && setQuantity(quantity + 1);
   };
 
   const handleOnChange = () => {
     const value = parseInt(inputCount.current.value);
     if (value <= stock && value != 0) {
-      setCount(value);
+      setQuantity(value);
     }
   };
 

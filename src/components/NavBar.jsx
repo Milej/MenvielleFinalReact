@@ -3,6 +3,7 @@ import CartWidget from "./CartWidget";
 import NavItem from "./NavItem";
 import NavList from "./NavList";
 import { NavLink } from "react-router-dom";
+import LoginIcon from '@mui/icons-material/Login';
 
 function NavBar() {
   return (
@@ -18,6 +19,7 @@ function NavBar() {
       </ul>
 
       <div className="flex gap-5">
+        <NavLink to="/login"><LoginIcon /></NavLink>
         <CartWidget />
       </div>
     </nav>

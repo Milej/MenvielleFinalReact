@@ -2,21 +2,35 @@ import { useState, useEffect } from "react";
 import ItemCount from "./ItemCount";
 import { useParams, NavLink } from "react-router-dom";
 import { currencyFormatter } from "./../utils/formatter";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 const ItemDetail = ({ products }) => {
   const { id } = useParams();
-
   const [product, setProduct] = useState("");
-  // const [quantity, setQuantity] = useState(1);
+  const { cart, setCart } = useContext(CartContext);
+  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
     const findProduct = products.find((item) => item.id == id);
     setProduct(findProduct);
   }, []);
 
-  const onAdd = () => {
-    // const productAdd = 
-  }
+  const addProduct = () => {
+    const existentInCart = cart.find((item) => item.id == product.id);
+
+    if (existentInCart == undefined) {
+      setCart((current) => [...current, { ...product, quantity }]);
+    } else {
+      if(product.stock >= quantity){
+        existentInCart.quantity = quantity;
+      }
+    }
+  };
+
+  const handleChange = (quantity) => {
+    setQuantity(quantity);
+  };
 
   return (
     <div className="bg-gray-200 min-w-screen min-h-screen grid place-content-center">
@@ -35,11 +49,22 @@ const ItemDetail = ({ products }) => {
               Stock disponible{" "}
               <span className="font-light">({product.stock})</span>
             </p>
-            <ItemCount stock={product.stock}/>
-            <NavLink to="/cart" className="block w-full text-center border border-zinc-700 text-zinc-700 rounded-lg px-5 py-2 hover:text-white hover:bg-zinc-700">
+            <ItemCount
+              stock={product.stock}
+              quantity={quantity}
+              setQuantity={handleChange}
+            />
+            <button
+              className="block w-full text-center border border-zinc-700 text-zinc-700 rounded-lg px-5 py-2 hover:text-white hover:bg-zinc-700"
+              onClick={addProduct}
+            >
               Agregar al carrito
-            </NavLink>
-            <NavLink to="/checkout" className="block w-full text-center border border-zinc-700 text-zinc-700 rounded-lg px-5 py-2 hover:text-white hover:bg-zinc-700">
+            </button>
+            <NavLink
+              to="/cart"
+              className="block w-full text-center border border-zinc-700 text-zinc-700 rounded-lg px-5 py-2 hover:text-white hover:bg-zinc-700"
+              onClick={addProduct}
+            >
               Comprar
             </NavLink>
           </div>
