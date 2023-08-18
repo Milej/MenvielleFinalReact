@@ -2,7 +2,8 @@
   {
   "id": 1,
   "name": "Cat Chow Adulto Carne Y Pollo X 15 Kg",
-  "category": "Alimento",
+  "categoryId": "alimento",
+  "categoryName": "Alimento",
   "description": "Purina Cat Chow Defense Plus + es un alimento 100% balanceado y completo, con prebiótico natural, sin colorantes ni sabores artificiales, indicado para gato adulto a partir de 1 año de edad. Su fórmula refuerza la protección del tracto urinario y ayuda a reducir la acumulación de sarro, cuidando la piel y manteniendo su pelo saludable. Sabor a carne.",
   "image": "http://localhost:5173/src/img/productos/alimentos/alimento-catchow-cyp-gato.webp",
   "price": 19500,
@@ -11,7 +12,8 @@
   {
     "id": 2,
     "name": "Cat Chow Adulto Pescado Y Pollo X 15 Kg",
-    "category": "Alimento",
+    "categoryId": "alimento",
+    "categoryName": "Alimento",
     "description": "Purina Cat Chow Defense Plus + es un alimento 100% balanceado y completo, con prebiótico natural, sin colorantes ni sabores artificiales, indicado para gato adulto a partir de 1 año de edad. Su fórmula refuerza la protección del tracto urinario y ayuda a reducir la acumulación de sarro, cuidando la piel y manteniendo su pelo saludable. Sabor a pescado.",
     "image": "http://localhost:5173/src/img/productos/alimentos/alimento-catchow-pyp-gato.webp",
     "price": 19500,
@@ -20,7 +22,8 @@
   {
     "id": 3,
     "name": "Excellent Smart Gatito Pollo Y Arroz 7.5 Kg",
-    "category": "Alimento",
+    "categoryId": "alimento",
+    "categoryName": "Alimento",
     "description": "Purina Excellent Kitten Smart ofrece una alimentación completa y balanceada para tu gato durante su primer año de vida. Su fórmula está basada en proteínas de alta digestibilidad, esenciales para un correcto desarrollo estructural de sus músculos. Además, aporta ácidos grasos Omega 3 y 6, vitaminas y minerales en su justa proporción para promover la salud de su piel, su pelo y sus huesos.",
     "image": "http://localhost:5173/src/img/productos/alimentos/alimento-purina-pya-kitten.webp",
     "price": 17900,
@@ -29,7 +32,8 @@
   {
     "id": 4,
     "name": "Sieger Gato Katze Kitten X 7.5 Kg",
-    "category": "Alimento",
+    "categoryId": "alimento",
+    "categoryName": "Alimento",
     "description": "Durante los primeros meses de vida, los gatitos se encuentran expuestos a agentes externos que pueden causarles diferentes patologías. Una nutrición específica es clave. Darle un alimento balanceado que lo proteja y que le aporte todos los nutrientes es primordial para que crezca y se desarrolle de manera saludable. Sieger Katze Kitten está especialmente formulado con L- Lisina para ayudar al gatito a fortalecer su sistema inmunológico y con DHA (ácido Omega 3) que promueve el óptimo desarrollo del cerebro y la visión.",
     "image": "http://localhost:5173/src/img/productos/alimentos/alimento-sieger-kitten.webp",
     "price": 14500,
@@ -38,7 +42,8 @@
   {
     "id": 5,
     "name": "Royal Canin Gatito 36 X 7.5 Kg",
-    "category": "Alimento",
+    "categoryId": "alimento",
+    "categoryName": "Alimento",
     "description": "Royal Canin Kitten 36 es un alimento balanceado para gatitos hasta los 12 meses de edad (2° fase de crecimiento). Contribuye a una seguridad digestiva reforzada, el refuerzo de las defensas naturales, la reducción del olor fecal y el formato de sus croquetas se adaptan a la dentición definitiva del gatito. Ideado para proteger el sistema de defensas en los gatos más pequeños. Su contenido proteíco produce una mejor digestibilidad a la hora de su ingesta.",
     "image": "http://localhost:5173/src/img/productos/alimentos/alimento-royalcanin-kitten.webp",
     "price": 28000,
@@ -47,7 +52,8 @@
   {
     "id": 6,
     "name": "Bocaditos De La Granja X 45 Gr Golomiau",
-    "category": "Snacks",
+    "categoryId": "snacks",
+    "categoryName": "Snacks",
     "description": "Bocaditos semi húmedos con sabores de la granja. Cuentan con el aporte de Taurina, que mejora la digestión. Además, contiene antioxidantes. Su incorporación permite reemplazar galletitas y golosinas dulces y otros productos de consumo humano no aptos para gatos.",
     "image": "http://localhost:5173/src/img/productos/snacks/bocaditos-granja.webp",
     "price": 319,
@@ -56,7 +62,8 @@
   {
     "id": 7,
     "name": "Tiritas Blandas Raza Gatos Sabor Carne X 50 Gr",
-    "category": "Snacks",
+    "categoryId": "snacks",
+    "categoryName": "Snacks",
     "description": "Raza tiritas blandas sabor carne es una golosina rica y novedosa de excelente sabor, ideal para premiar todos los días a tu gato. Además, es fuente de calcio que contribuye a mejorar el cuidado de los huesos.",
     "image": "http://localhost:5173/src/img/productos/snacks/tiritas-raza-gato.webp",
     "price": 360,
@@ -65,7 +72,8 @@
   {
     "id": 8,
     "name": "Purina Dentalife Perros Razas Gde X 196 Grs",
-    "category": "Snacks",
+    "categoryId": "snacks",
+    "categoryName": "Snacks",
     "description": "Purina Dentalife es un snack ideal para el cuidado diario de la salud oral de tu perro adulto de raza grande. Hecho de ingredientes saludables, sin colorantes ni sabores artificiales, sabor a pollo con textura porosa y fácil de masticar, lo que ayuda a limpiar los dientes en lugares difíciles de alcanzar llegando a la encía. Reduce la acumulación de sarro y refresca el aliento. Está especialmente diseñado para que tu mascota lo disfrute al máximo. Sus principales ingredientes son: arroz, harina de trigo, glicerina, harina de cebada malteada, harina de subproductos de pollo, fosfato mono y dicálcico, ácido sórbico (como conservador), propionato de calcio (como conservador), bicarbonato de sodio, BHA (como conservador), BHT (como conservador), carbonato de calcio, ácido cítrico.",
     "image": "http://localhost:5173/src/img/productos/snacks/dentalife-purina-perro.webp",
     "price": 1185,
@@ -74,7 +82,8 @@
   {
     "id": 9,
     "name": "Dental Care Golomiau X 60 Grs",
-    "category": "Snacks",
+    "categoryId": "snacks",
+    "categoryName": "Snacks",
     "description": "Dental Care Golomiau por 60 grs es una golosina deliciosa sabor pollo para gatos adultos desde el destete en adelante. Gracia a sus ingredientes y textura mantendrá los dientes de tu gato limpios y libres de sarro.",
     "image": "http://localhost:5173/src/img/productos/snacks/dentalcare-golomiau.jpg",
     "price": 605,
@@ -83,7 +92,8 @@
   {
     "id": 10,
     "name": "Bocaditos Golocan Carne, Pollo Y Chocolate X 100 G",
-    "category": "Snacks",
+    "categoryId": "snacks",
+    "categoryName": "Snacks",
     "description": "Sabrosos bocaditos húmedos, de consistencia soft y blanda. Se trata de un mix de tres tipos de bocaditos hechos a base de carne, pollo y trigo con aroma a chocolate, lo cual resulta delicioso pero también nutritivo para el perro. Su uso permite reemplazar galletitas, golosinas dulces y otros productos de consumo humano no aptos para perros.",
     "image": "http://localhost:5173/src/img/productos/snacks/bocaditos-golocan.webp",
     "price": 465,
@@ -92,7 +102,8 @@
   {
     "id": 11,
     "name": "Mini Bocaditos Bajo En Grasas X 100 Gr",
-    "category": "Snacks",
+    "categoryId": "snacks",
+    "categoryName": "Snacks",
     "description": "El mejor alimento para tu mascota al mejor precio",
     "image": "http://localhost:5173/src/img/productos/snacks/mini-bocaditos-golocan.webp",
     "price": 500,
@@ -101,7 +112,8 @@
   {
     "id": 12,
     "name": "Snack Natuplus Pescado Perro/Gato Balde X 100 Grs",
-    "category": "Snacks",
+    "categoryId": "snacks",
+    "categoryName": "Snacks",
     "description": "Snacks liofilizados con alto valor nutricional (70% proteínas) con sabor original a hígado y de fácil digestión. Con la misma tecnología utilizada en el alimento para astronautas (iofilización) y materia prima de alta calidad, como la comemos en nuestras casaas. Se le pueden dar a todos los animales de compañía: perros, gatos, hurones, erizos y hámsteres. Mejora el aliento. La carne no se pega a los dientes. Favorece la digestión ante la ausencia de harinas y el bajo nivel de fibras.",
     "image": "http://localhost:5173/src/img/productos/snacks/snack-natuplus.webp",
     "price": 3840,
@@ -110,7 +122,8 @@
   {
     "id": 13,
     "name": "Chapita Cream Labrador",
-    "category": "Paseos",
+    "categoryId": "paseos-viajes",
+    "categoryName": "Paseos y Viajes",
     "description": "",
     "image": "http://localhost:5173/src/img/productos/paseos/chapita-cream.webp",
     "price": 4551,
@@ -119,7 +132,8 @@
   {
     "id": 14,
     "name": "Correa Extensible Flexible M 5 M Azul Perro Hasta 20 Kg",
-    "category": "Paseos",
+    "categoryId": "paseos-viajes",
+    "categoryName": "Paseos y Viajes",
     "description": "Correa extensible con botón de frenado para paseo de mascotas de hasta 20 kilos. Diseño de manija ergonómico para evitar lesiones en las manos. Largo total: 5 metros.",
     "image": "http://localhost:5173/src/img/productos/paseos/correa-extensible.webp",
     "price": 13310,
@@ -128,7 +142,8 @@
   {
     "id": 15,
     "name": "Transportadora Para Perro Chico Skudo",
-    "category": "Paseos",
+    "categoryId": "paseos-viajes",
+    "categoryName": "Paseos y Viajes",
     "description": "Esta transportadora está fabricada con materiales resistentes que garantizan la seguridad para el transporte de tu mascota.Cuenta con un diseño con ventanas laterales que permite el flujo óptimo de aire. Además, posee una reja superior que facilita aún más el acceso de la mascota a la transportadora. Medidas: 55 cm (largo) x 36 cm (ancho) x 35 cm (alto).",
     "image": "http://localhost:5173/src/img/productos/paseos/transportadora.webp",
     "price": 28756,
@@ -137,7 +152,8 @@
   {
     "id": 16,
     "name": "Pelota Maciza De 40 Mm",
-    "category": "Juguetes",
+    "categoryId": "juguetes",
+    "categoryName": "Juguetes",
     "description": "Pelota sólida pensada para divertir a perros con dentaduras fuertes. Al morderla, tu perro liberará estrés además de entretenerse. Sirve también para que ejercite su mandíbula. Tiene 4 cm de diámetro y está fabricada en goma maciza de alta densidad.",
     "image": "http://localhost:5173/src/img/productos/juguetes/pelota.webp",
     "price": 183,
@@ -146,7 +162,8 @@
   {
     "id": 17,
     "name": "Gigwy Egg Wobble Cock Tpr/Plush",
-    "category": "Juguetes",
+    "categoryId": "juguetes",
+    "categoryName": "Juguetes",
     "description": "",
     "image": "http://localhost:5173/src/img/productos/juguetes/pollo.webp",
     "price": 6183,
@@ -155,7 +172,8 @@
   {
     "id": 18,
     "name": "Cama Dogit Rectangular Con Corderito Negra Mediana",
-    "category": "Camas",
+    "categoryId": "camas",
+    "categoryName": "Camas",
     "description": "Las camas Donut tienen corderito en el interior para brindar sensación de comodidad y calor a tu mascota. Su diseño rectangular amplio brinda el espacio que tu perro necesita para un apropiado descanso. Medidas: 60 x 51 x 23 cm.",
     "image": "http://localhost:5173/src/img/productos/camas/cama-dogit.webp",
     "price": 15532,
@@ -164,7 +182,8 @@
   {
     "id": 19,
     "name": "Cama Para Mascotas Mod Cama Patagonia J T:7 15Hx135X85 Negro Huellas",
-    "category": "Camas",
+    "categoryId": "camas",
+    "categoryName": "Camas",
     "description": "",
     "image": "http://localhost:5173/src/img/productos/camas/cama-patagonia.webp",
     "price": 42265,
@@ -173,7 +192,8 @@
   {
     "id": 20,
     "name": "Abrigo De Jean Para Perro Con Corderito Modelo Jana Talle 75",
-    "category": "Camas",
+    "categoryId": "camas",
+    "categoryName": "Camas",
     "description": "Abrigo de jean con corderito interno que le brinda a tu perro máxima protección a las bajas temperaturas. Es súper cómodo y abrigado. Tiene las costuras reforzadas que le otorgan mayor durabilidad. La cinta de ajuste rayada es regulable, se adapta a todo tipo de cuerpo y además le da un toque de distinción. Es apto para lavarropas.",
     "image": "http://localhost:5173/src/img/productos/camas/abrigo.webp",
     "price": 22463,

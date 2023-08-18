@@ -1,9 +1,7 @@
-import React from "react";
 import Logo from "../img/logo.webp";
 import CartWidget from "./CartWidget";
 import NavItem from "./NavItem";
 import NavList from "./NavList";
-import InputSearch from "./InputSearch";
 import { NavLink } from "react-router-dom";
 
 function NavBar() {
@@ -15,12 +13,11 @@ function NavBar() {
       </NavLink>
 
       <ul className="navbar__navigation">
-        <NavItem route="/" texto="Inicio" />
+        <NavItem route="/" texto="Todos los productos" />
         <NavList />
       </ul>
 
       <div className="flex gap-5">
-        <InputSearch />
         <CartWidget />
       </div>
     </nav>

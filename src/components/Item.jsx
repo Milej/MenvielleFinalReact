@@ -1,25 +1,23 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { currencyFormatter } from "./../utils/formatter";
 
 const Item = ({ id, name, category, image, price }) => {
-
+  
   return (
-    <div className="col-span-1 rounded shadow-lg">
+    <Link
+      className="col-span-1 rounded shadow-xl cursor-pointer hover:scale-105 ease-in duration-100"
+      to={`/item/${id}`}
+    >
       <img src={image} alt={name} className="w-full" />
-      <div className="px-6 py-4">
-        <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+      <div className="px-6 py-4 space-y-3">
+        <span className="rounded-md bg-orange-400 px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-gray-500/20">
           {category}
         </span>
-        <div className="text-base mb-2">{name}</div>
-        <p className="text-gray-700 font-bold text-base">${price}</p>
-        <NavLink
-          to={`item/${id}`}
-          className=" bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 my-4 border border-blue-500 hover:border-transparent rounded"
-        >
-          Detalle
-        </NavLink>
+        <p className="text-zinc-800 text-3xl">{currencyFormatter(price)}</p>
+        <div className="text-sm">{name}</div>
       </div>
-    </div>
+    </Link>
   );
 };
 
