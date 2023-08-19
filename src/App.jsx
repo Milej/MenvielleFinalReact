@@ -7,11 +7,13 @@ import Checkout from "./components/Checkout";
 import CartContext from "./context/CartContext";
 import Login from "./components/Login"
 import SignUp from "./components/SignUp"
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
     <BrowserRouter>
       <CartContext>
+        <ToastContainer />
         <NavBar />
         <Routes>
           <Route exact path="/" element={<ItemListContainer />} />

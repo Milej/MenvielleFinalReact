@@ -20,9 +20,9 @@ const ItemCount = ({ stock, quantity, setQuantity }) => {
   };
 
   return (
-    <div className="flex justify-between">
+    <div className="flex">
       <button
-        className="border border-zinc-700 text-zinc-700 text-base px-3 py-1 rounded-l-lg hover:text-white hover:bg-zinc-700 max-h-10 self-center" 
+        className="border border-zinc-700 text-zinc-700 text-base px-3 py-1 rounded-l-lg hover:text-white hover:bg-zinc-700 max-h-10" 
         onClick={onSubstract}
       >
         -
@@ -30,13 +30,13 @@ const ItemCount = ({ stock, quantity, setQuantity }) => {
       <input
         type="number"
         ref={inputCount}
-        className="remove-arrow border outline-none border-none text-center text-2xl"
+        className="remove-arrow border-t border-b outline-none text-center text-base border-zinc-700 text-zinc-700 max-h-10"
         value={quantity}
         onChange={handleOnChange}
         min={1}
       />
       <button
-        className="border border-zinc-700 text-zinc-700 text-base px-3 py-1 rounded-r-lg hover:text-white hover:bg-zinc-700 max-h-10 self-center"
+        className="border border-zinc-700 text-zinc-700 text-base px-3 py-1 rounded-r-lg hover:text-white hover:bg-zinc-700 max-h-10"
         onClick={onAdd}
       >
         +
