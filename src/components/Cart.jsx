@@ -20,7 +20,7 @@ const Cart = () => {
         "http://localhost:5173/src/img/productos/alimentos/alimento-catchow-cyp-gato.webp",
       price: 19500,
       stock: 10,
-      quantity: 10
+      quantity: 10,
     },
     {
       id: 2,
@@ -33,42 +33,42 @@ const Cart = () => {
         "http://localhost:5173/src/img/productos/alimentos/alimento-catchow-pyp-gato.webp",
       price: 19500,
       stock: 5,
-      quantity: 10
+      quantity: 10,
     },
   ];
   return (
-    <div className="bg-gray-200 max-w-screen min-h-screen p-10 ">
-      <div className="container bg-white mx-auto">
+    <div className="bg-gray-200 max-w-screen min-h-screen p-10 flex">
+      <div className="container bg-white rounded-md mx-auto">
         <h1 className="text-lg font-semibold px-10 py-5">
           Productos a comprar
         </h1>
 
         {cartItems > 0 ? (
           cart.map((item) => (
-            <div className="flex p-5 border-t border-b border-zinc-200">
+            <div className="flex p-5 border-t border-b border-zinc-200 justify-around">
               <img src={item.image} alt={item.name} className="w-32 h-32" />
-              <div className="flex">
+              <div className="flex-row">
                 <h2 className="text-md font-semibold">{item.name}</h2>
                 <button className="text-red-500">Quitar producto</button>
               </div>
-              <ItemCount
-                stock={item.stock}
-                quantity={item.quantity}
-                setQuantity={""}
-              />
-              {/* <div className="flex-row space-y-14">
-              
-              <h6 className="text-4xl">{currencyFormatter(item.price)}</h6>
-              <p className="text-zinc-400 text-sm text-justify">
-                {item.description}
-              </p>
-            </div> */}
+              <div className="flex-col space-y-4">
+                <p className="font-light">Stock disponible ({item.stock})</p>
+                <ItemCount
+                  stock={item.stock}
+                  quantity={item.quantity}
+                  setQuantity={""}
+                />
+              </div>
             </div>
           ))
         ) : (
           <h1>Sin datos</h1>
         )}
-        <div className="container flex"></div>
+      </div>
+      <div className="container bg-white rounded-md max-w-xs mx-4 px-10 py-5">
+        <h6 className="text-lg font-semibold border-b border-zinc-200">
+          Resumen de la compra
+        </h6>
       </div>
     </div>
   );

@@ -22,7 +22,7 @@ const ItemCount = ({ stock, quantity, setQuantity }) => {
   return (
     <div className="flex justify-between">
       <button
-        className="border border-zinc-700 text-zinc-700 text-base px-3 py-1 rounded-l-lg hover:text-white hover:bg-zinc-700"
+        className="border border-zinc-700 text-zinc-700 text-base px-3 py-1 rounded-l-lg hover:text-white hover:bg-zinc-700 max-h-10 self-center" 
         onClick={onSubstract}
       >
         -
@@ -36,7 +36,7 @@ const ItemCount = ({ stock, quantity, setQuantity }) => {
         min={1}
       />
       <button
-        className="border border-zinc-700 text-zinc-700 text-base px-3 py-1 rounded-r-lg hover:text-white hover:bg-zinc-700"
+        className="border border-zinc-700 text-zinc-700 text-base px-3 py-1 rounded-r-lg hover:text-white hover:bg-zinc-700 max-h-10 self-center"
         onClick={onAdd}
       >
         +
