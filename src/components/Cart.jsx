@@ -21,14 +21,14 @@ const Cart = () => {
     setTotal(parseFloat(shipping) + parseFloat(productsTotal))
   }, [productsTotal, cart])
 
-  const removeProduct = (id) => {
-    const updateCart = cart.filter(item => item.id != id)
+  const removeProduct = (uid) => {
+    const updateCart = cart.filter(item => item.uid != uid)
     // setProductsTotal(0)
     setCart(updateCart)
   }
 
-  const changeProductQuantity = (qty, id) => {
-    const updateItemQty = cart.find(item => item.id == id)
+  const changeProductQuantity = (qty, uid) => {
+    const updateItemQty = cart.find(item => item.uid == uid)
     updateItemQty.quantity = qty;
     setProductsTotal(cart.reduce((acc, curr) => acc + (curr.price * curr.quantity), 0))
   }
@@ -51,12 +51,12 @@ const Cart = () => {
                   <Link to={`/item/${item.uid}`}>
                     <h2 className="text-md font-semibold">{item.name}</h2>
                   </Link>
-                  <button type="button" onClick={() => removeProduct(item.id)} className="text-red-500 my-6">Quitar producto</button>
+                  <button type="button" onClick={() => removeProduct(item.uid)} className="text-red-500 my-6">Quitar producto</button>
                 </div>
               </div>
               <div className="grid justify-center">
                 <ItemCount
-                  id={item.id}
+                  uid={item.uid}
                   stock={item.stock}
                   quantity={item.quantity}
                   setQuantity={changeProductQuantity}
