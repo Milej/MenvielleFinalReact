@@ -1,28 +1,28 @@
-import { useState, useRef } from "react";
+import { useRef } from "react";
 
-const ItemCount = ({ stock, quantity, setQuantity }) => {
+const ItemCount = ({ id, stock, quantity, setQuantity }) => {
 
   const inputCount = useRef();
 
   const onSubstract = () => {
-    quantity > 1 && setQuantity(quantity - 1);
+    quantity > 1 && setQuantity(quantity - 1, id);
   };
 
   const onAdd = () => {
-    quantity < stock && setQuantity(quantity + 1);
+    quantity < stock && setQuantity(quantity + 1, id);
   };
 
   const handleOnChange = () => {
     const value = parseInt(inputCount.current.value);
     if (value <= stock && value != 0) {
-      setQuantity(value);
+      setQuantity(value, id);
     }
   };
 
   return (
     <div className="flex">
       <button
-        className="border border-zinc-700 text-zinc-700 text-base px-3 py-1 rounded-l-lg hover:text-white hover:bg-zinc-700 max-h-10" 
+        className="border border-zinc-700 text-zinc-700 text-base px-3 py-1 rounded-l-lg hover:text-white hover:bg-zinc-700 max-h-10"
         onClick={onSubstract}
       >
         -

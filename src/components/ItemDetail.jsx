@@ -1,63 +1,32 @@
 import { useState, useEffect } from "react";
 import ItemCount from "./ItemCount";
-import { useParams, NavLink, Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { currencyFormatter } from "./../utils/formatter";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import Loader from "./Loader";
 
-const ItemDetail = ({ products }) => {
-  const { id } = useParams();
-  const [product, setProduct] = useState("");
-  const { cart, setCart, cartItems } = useContext(CartContext);
+const ItemDetail = ({ product }) => {
+
+  const { cart, cartItems, onAdd } = useContext(CartContext);
   const [quantity, setQuantity] = useState(1);
-
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
-    const findProduct = products.find((item) => item.id == id);
-    setProduct(findProduct);
-  }, []);
 
-  const addProduct = () => {
+    const existProductInCart = cart.find(item => item.uid == product.uid)
 
-    const existentInCart = cart.find((item) => item.id == product.id);
-
-    if (existentInCart == undefined) {
-      toast.success(`${product.name} producto agregado al carrito`, {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-      setCart((current) => [...current, { ...product, quantity }]);
-
-
-    } else {
-      if (product.stock >= quantity) {
-        toast.success(`${product.name} ( x${quantity} )`, {
-          position: "top-right",
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
-        existentInCart.quantity = quantity;
-      }
+    if (existProductInCart) {
+      setQuantity(existProductInCart.quantity)
     }
-  };
+    product && setLoading(false);
+  }, [product]);
 
-  const handleChange = (quantity) => {
-    setQuantity(quantity);
-  };
+  const handleClick = () => {
+    const productToAdd = { name: product.name, image: product.image, price: product.price, stock: product.stock, uid: product.uid }
+    onAdd(productToAdd, quantity)
+  }
 
-  return (
+  return loading ? <Loader /> : (
     <div className="bg-zinc-100 min-w-screen min-h-screen grid place-content-center">
 
       <div className="container bg-white rounded shadow-sm">
@@ -79,18 +48,18 @@ const ItemDetail = ({ products }) => {
               <ItemCount
                 stock={product.stock}
                 quantity={quantity}
-                setQuantity={handleChange}
+                setQuantity={setQuantity}
               />
             </div>
             <button
               className="block w-full text-center border border-zinc-700 text-zinc-700 rounded-lg px-5 py-2 hover:text-white hover:bg-zinc-700"
-              onClick={addProduct}>
+              onClick={handleClick}>
               Agregar al carrito
             </button>
             <NavLink
               to="/cart"
               className="block w-full text-center border border-zinc-700 text-zinc-700 rounded-lg px-5 py-2 hover:text-white hover:bg-zinc-700"
-              onClick={addProduct}>
+              onClick={handleClick}>
               Comprar
             </NavLink>
             {cartItems > 0 && <NavLink

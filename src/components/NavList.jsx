@@ -39,6 +39,15 @@ const NavList = () => {
             Alimento
           </NavLink>
           <NavLink
+            to={"category/snacks"}
+            className="text-gray-700 block px-4 py-2 text-sm hover:bg-orange-300"
+            role="menuitem"
+            tabIndex="-1"
+            id="menu-item-0"
+          >
+            Snacks
+          </NavLink>
+          <NavLink
             to={"category/paseos-viajes"}
             className="text-gray-700 block px-4 py-2 text-sm hover:bg-orange-300"
             role="menuitem"
@@ -64,6 +73,15 @@ const NavList = () => {
             id="menu-item-3"
           >
             Camas
+          </NavLink>
+          <NavLink
+            to={"category/otros"}
+            className="text-gray-700 block px-4 py-2 text-sm hover:bg-orange-300"
+            role="menuitem"
+            tabIndex="-1"
+            id="menu-item-3"
+          >
+            Otros
           </NavLink>
         </div>
       </div>
