@@ -1,21 +1,21 @@
 import { useRef } from "react";
 
-const ItemCount = ({ id, stock, quantity, setQuantity }) => {
+const ItemCount = ({ uid, stock, quantity, setQuantity }) => {
 
   const inputCount = useRef();
 
   const onSubstract = () => {
-    quantity > 1 && setQuantity(quantity - 1, id);
+    quantity > 1 && setQuantity(quantity - 1, uid);
   };
 
   const onAdd = () => {
-    quantity < stock && setQuantity(quantity + 1, id);
+    quantity < stock && setQuantity(quantity + 1, uid);
   };
 
   const handleOnChange = () => {
     const value = parseInt(inputCount.current.value);
     if (value <= stock && value != 0) {
-      setQuantity(value, id);
+      setQuantity(value, uid);
     }
   };
 
